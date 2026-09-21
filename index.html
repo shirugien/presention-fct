@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCT Prévention — Cabinet expert en financement FIPU pour TPE et PME</title>
+<meta name="description" content="FCT Prévention, cabinet spécialisé en prévention des risques professionnels, accompagne les entreprises dans le montage de dossiers FIPU : diagnostic, formations, équipements et aménagements de poste financés jusqu'à 85%.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.fct-prevention.fr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FCT Prévention — Cabinet expert en financement FIPU">
+<meta property="og:description" content="Diagnostic ergonomique, formations, équipements et aménagements de poste financés jusqu'à 125 000 € via le FIPU.">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{
+    --navy:#0c2d52; --navy-dark:#081d38; --blue:#1a5b96; --blue-light:#eaf2f9;
+    --red:#c8102e; --red-dark:#970d22; --red-light:#fbe9ec;
+    --bg:#ffffff; --bg-alt:#f4f7fa; --ink:#1c2733; --ink-muted:#4a5568;
+    --border:#dde4ec; --radius:8px; --maxw:1200px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{transition:none !important; animation:none !important;} }
+  body{margin:0; font-family:var(--font); background:var(--bg); color:var(--ink); line-height:1.65; font-size:16px;}
+  img,svg{display:block; max-width:100%;}
+  img{width:100%; height:auto; object-fit:cover;}
+  a{color:var(--blue); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  .skip-link{position:absolute; left:-999px; top:0; background:var(--red); color:#fff; padding:8px 16px; z-index:100;}
+  .skip-link:focus{left:8px; top:8px;}
+
+  h1,h2,h3{font-family:var(--font); color:var(--navy); font-weight:800; letter-spacing:-.01em;}
+  p{color:var(--ink-muted);}
+
+  /* BANDEAU OFFICIEL */
+  .top-bar{background:var(--navy-dark); color:#cfe0f0; font-size:.82rem; padding:8px 0; border-bottom:3px solid var(--red);}
+  .top-bar .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  .top-bar a{color:#cfe0f0;}
+
+  header.site{background:var(--bg); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:50;}
+  .navbar{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--maxw); margin:0 auto;}
+  .logo{display:flex; align-items:center; gap:12px;}
+  .logo-mark{width:44px; height:44px; border-radius:6px; background:var(--navy); display:flex; align-items:center; justify-content:center; position:relative;}
+  .logo-mark::after{content:""; position:absolute; bottom:-3px; left:6px; right:6px; height:3px; background:var(--red); border-radius:2px;}
+  .logo-mark svg{width:26px; height:26px;}
+  .logo-text{font-weight:800; font-size:1.15rem; color:var(--navy); line-height:1.1;}
+  .logo-text small{display:block; font-weight:500; font-size:.72rem; color:var(--ink-muted); text-transform:uppercase; letter-spacing:.05em;}
+  nav.primary{display:flex; gap:26px;}
+  nav.primary a{font-size:.92rem; color:var(--ink); font-weight:600;}
+  nav.primary a:hover{color:var(--red); text-decoration:none;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:4px; font-weight:700; font-size:.92rem; cursor:pointer; border:2px solid transparent;}
+  .btn-primary{background:var(--red); color:#fff;}
+  .btn-primary:hover{background:var(--red-dark); text-decoration:none;}
+  .btn-outline{background:transparent; border-color:var(--navy); color:var(--navy);}
+  .btn-outline:hover{background:var(--blue-light); text-decoration:none;}
+
+  /* HERO */
+  .hero{background:linear-gradient(180deg, var(--blue-light), #fff); padding:64px 0 56px; border-bottom:1px solid var(--border);}
+  .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .badge-official{display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--border); border-left:4px solid var(--red); padding:8px 14px; border-radius:4px; font-size:.82rem; font-weight:700; color:var(--navy); margin-bottom:18px;}
+  .hero h1{font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1.25; margin:0 0 18px;}
+  .hero p.lead{font-size:1.08rem; margin-bottom:28px; max-width:560px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px;}
+  .trust-line{display:flex; gap:22px; flex-wrap:wrap; font-size:.85rem; color:var(--ink-muted); align-items:center;}
+  .trust-line span{display:flex; align-items:center; gap:6px;}
+  .trust-line span::before{content:"✓"; color:var(--red); font-weight:800;}
+
+  .photo-frame{border-radius:var(--radius); overflow:hidden; box-shadow:0 16px 36px -18px rgba(12,45,82,.3); border:1px solid var(--border);}
+  .photo-frame img{aspect-ratio:4/3;}
+  figure.photo-frame{margin:0;}
+  figure.photo-frame figcaption{font-size:.74rem; color:var(--ink-muted); padding:8px 4px 0; text-align:left;}
+
+  /* CHIFFRES CLES */
+  .stats-bar{background:var(--navy); color:#fff; padding:40px 0; border-top:3px solid var(--red); border-bottom:3px solid var(--red);}
+  .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;}
+  @media (max-width:800px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+  .stats-grid .num{font-size:2.1rem; font-weight:800; color:#fff;}
+  .stats-grid .lbl{font-size:.85rem; color:#c9d9ea; margin-top:4px;}
+
+  section{padding:64px 0;}
+  section.alt{background:var(--bg-alt);}
+  .section-head{max-width:720px; margin-bottom:40px;}
+  .section-head .kicker{color:var(--red); font-weight:800; font-size:.8rem; text-transform:uppercase; letter-spacing:.06em;}
+  .section-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem); margin:8px 0 12px;}
+
+  /* A PROPOS 2 COL */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-grid p{margin-bottom:16px;}
+  .credentials{list-style:none; margin:20px 0 0; padding:0; display:grid; gap:12px;}
+  .credentials li{display:flex; gap:12px; align-items:flex-start; font-size:.94rem; color:var(--ink);}
+  .credentials li svg{flex:0 0 auto; margin-top:2px;}
+
+  /* PRESTATIONS - liste institutionnelle avec numéros */
+  .service-list{display:grid; gap:20px;}
+  .service-row{
+    display:grid; grid-template-columns:64px 1fr; gap:22px; align-items:start;
+    background:#fff; border:1px solid var(--border); border-left:4px solid var(--navy); border-radius:var(--radius); padding:26px;
+  }
+  .service-num{
+    width:52px; height:52px; border-radius:50%; background:var(--red-light); color:var(--red);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; border:2px solid var(--red);
+  }
+  .service-row h3{margin:0 0 8px; font-size:1.12rem;}
+  .service-row p{margin:0 0 8px;}
+  .service-row ul{margin:8px 0 0; padding-left:20px; color:var(--ink-muted); font-size:.93rem;}
+
+  /* TABLE */
+  .table-wrap{overflow-x:auto; border:1px solid var(--border); border-radius:var(--radius); background:#fff;}
+  table{width:100%; border-collapse:collapse; font-size:.94rem; min-width:520px;}
+  th,td{padding:16px 20px; text-align:left; border-bottom:1px solid var(--border);}
+  thead th{background:var(--navy); color:#fff; font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.03em;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:var(--bg-alt);}
+
+  /* TEMOIGNAGES */
+  .testimonials{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:900px){.testimonials{grid-template-columns:1fr;}}
+  .testimonial{background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:28px; position:relative; border-top:3px solid var(--red);}
+  .testimonial .quote-mark{font-size:2.6rem; color:var(--blue-light); position:absolute; top:10px; right:20px; line-height:1;}
+  .testimonial p.quote{font-style:italic; color:var(--ink); margin-bottom:18px;}
+  .testimonial .author{display:flex; align-items:center; gap:12px;}
+  .avatar{width:44px; height:44px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800;}
+  .author .name{font-weight:700; font-size:.9rem; color:var(--navy);}
+  .author .role{font-size:.8rem; color:var(--ink-muted);}
+
+  /* GARANTIES */
+  .guarantees{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  @media (max-width:900px){.guarantees{grid-template-columns:repeat(2,1fr);}}
+  .guarantee{text-align:center; padding:24px 16px;}
+  .guarantee .g-icon{width:56px; height:56px; margin:0 auto 14px; border-radius:50%; background:var(--red-light); display:flex; align-items:center; justify-content:center;}
+  .guarantee h3{font-size:.98rem; margin:0 0 6px;}
+  .guarantee p{font-size:.86rem; margin:0;}
+
+  /* TIMELINE VERTICALE */
+  .timeline-v{border-left:3px solid var(--red); margin-left:20px; padding-left:32px; display:grid; gap:32px;}
+  .timeline-v .t-item{position:relative;}
+  .timeline-v .t-item::before{content:""; position:absolute; left:-42px; top:2px; width:18px; height:18px; border-radius:50%; background:var(--navy); border:3px solid #fff; box-shadow:0 0 0 2px var(--red);}
+  .timeline-v h3{margin:0 0 6px; font-size:1.05rem;}
+  .timeline-v p{margin:0;}
+
+  /* LOGOS PARTENAIRES */
+  .logos-strip{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:28px; opacity:.9;}
+  .logo-chip{display:flex; align-items:center; gap:8px; font-weight:800; color:var(--navy); font-size:.95rem; border:1px solid var(--border); padding:10px 18px; border-radius:6px; background:#fff;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--border); padding:20px 0;}
+  .faq-item summary{cursor:pointer; font-weight:700; font-size:1.02rem; list-style:none; display:flex; justify-content:space-between; align-items:center; color:var(--navy);}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+"; font-size:1.4rem; color:var(--red); font-weight:400;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-answer{color:var(--ink-muted); margin-top:12px; font-size:.95rem; max-width:760px;}
+
+  /* BANNIERE URGENCE */
+  .banner{background:#fff8ea; border:1px solid #e8d5a3; border-left:4px solid var(--red); border-radius:var(--radius); padding:28px; display:flex; gap:20px; align-items:center; flex-wrap:wrap;}
+  .banner h3{margin:0 0 6px; font-size:1.08rem; color:var(--navy);}
+  .banner p{margin:0; max-width:560px;}
+
+  /* CTA FINAL */
+  .cta-final{background:var(--navy); color:#fff; text-align:center; padding:72px 0; border-top:3px solid var(--red);}
+  .cta-final h2{color:#fff; font-size:clamp(1.6rem,3vw,2.2rem); margin:0 0 14px;}
+  .cta-final p{color:#c9d9ea; max-width:520px; margin:0 auto 28px;}
+  .cta-final .btn-primary{background:var(--red);}
+  .cta-final .btn-primary:hover{background:var(--red-dark);}
+
+  footer{background:var(--navy-dark); color:#a9bfd6; padding:48px 0 24px; font-size:.85rem;}
+  footer .foot-grid{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:32px; margin-bottom:32px;}
+  @media (max-width:800px){footer .foot-grid{grid-template-columns:1fr 1fr;}}
+  footer h4{color:#fff; font-size:.9rem; margin:0 0 12px;}
+  footer a{color:#a9bfd6;}
+  footer a:hover{color:#fff;}
+  footer ul{list-style:none; padding:0; margin:0; display:grid; gap:8px;}
+  .foot-bottom{border-top:1px solid #1c3a5c; padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:.78rem; max-width:var(--maxw); margin:0 auto; padding-left:24px; padding-right:24px;}
+
+  @media (max-width:760px){ nav.primary{display:none;} }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<div class="top-bar">
+  <div class="wrap">
+    <span>Cabinet spécialisé en prévention des risques professionnels — TPE / PME / Associations</span>
+    <span><a href="mailto:direction@fct-ingenierie.fr">direction@fct-ingenierie.fr</a> · <a href="tel:+33183644893">01 83 64 48 93</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="navbar">
+    <div class="logo">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div class="logo-text">FCT Prévention<small>Conseil en prévention &amp; financement FIPU</small></div>
+    </div>
+    <nav class="primary" aria-label="Navigation principale">
+      <a href="#fipu">Le FIPU</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#apropos">Notre cabinet</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary">Diagnostic gratuit</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge-official">🏛️ Dispositif national — Caisse Nationale de l'Assurance Maladie</span>
+        <h1>Sécurisez le financement de vos actions de prévention grâce au FIPU</h1>
+        <p class="lead">FCT Prévention est un cabinet de conseil dédié à la santé au travail. Nous accompagnons depuis plusieurs années les dirigeants de TPE et PME dans le diagnostic, le montage et le suivi de leur dossier FIPU, avec un taux de prise en charge pouvant atteindre 85 % et jusqu'à 125 000 € de subvention par entreprise.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Demander un diagnostic gratuit</a>
+          <a href="#montants" class="btn btn-outline">Consulter les montants</a>
+        </div>
+        <div class="trust-line">
+          <span>Accompagnement de A à Z</span>
+          <span>Consultants certifiés prévention</span>
+          <span>Premier échange sans engagement</span>
+        </div>
+      </div>
+      <figure class="photo-frame">
+        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/19e4eb8e-5251-5071-8aff-d5f43de94480/ff65e6a8-7fa7-5800-a68d-40c87b06ce82.jpg" alt="Équipe de consultants et dirigeants d'entreprise en réunion de travail dans un bureau moderne" loading="eager" width="800" height="600">
+        <figcaption>Photo — Pexels, libre de droit. Réunion de cadrage entre consultant et direction d'entreprise.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="wrap stats-grid">
+      <div><div class="num">85 %</div><div class="lbl">Taux de prise en charge maximal</div></div>
+      <div><div class="num">125 000 €</div><div class="lbl">Plafond cumulé par entreprise</div></div>
+      <div><div class="num">70 %</div><div class="lbl">Budget national réservé aux TPE/PME</div></div>
+      <div><div class="num">1 Md €</div><div class="lbl">Doté par la CNAM sur 5 ans</div></div>
+    </div>
+  </section>
+
+  <!-- QU'EST-CE QUE LE FIPU -->
+  <section id="fipu">
+    <div class="wrap about-grid">
+      <div>
+        <span class="kicker">Le dispositif</span>
+        <h2>Qu'est-ce que le FIPU ?</h2>
+        <p>Le Fonds d'Investissement dans la Prévention de l'Usure professionnelle (FIPU) est un dispositif national créé en 2023 par la Caisse Nationale de l'Assurance Maladie, doté d'environ un milliard d'euros sur cinq ans. Il a pour vocation de protéger durablement la santé des salariés exposés à trois facteurs de risques ergonomiques reconnus comme les principales causes d'usure professionnelle en France.</p>
+        <p>Concrètement, le FIPU permet à une entreprise de transformer une contrainte de conformité — l'exposition de ses salariés à des risques ergonomiques — en un projet de prévention financé majoritairement par des fonds publics. C'est un levier à la fois humain, social et économique : il réduit l'absentéisme, limite les risques de contentieux liés aux troubles musculo-squelettiques et améliore la fidélisation des équipes.</p>
+        <ul class="credentials">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Postures pénibles : positions forcées des articulations liées à l'activité</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Manutentions manuelles : port et déplacement de charges à risque de TMS</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Vibrations mécaniques : exposition via outils, véhicules ou machines</li>
+        </ul>
+      </div>
+      <figure class="photo-frame">
+        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/67ce377f-5dd7-5718-b586-08dc0a33b84f/ff65e6a8-7fa7-5800-a68d-40c87b06ce82.jpg" alt="Ingénieurs échangeant dans un atelier industriel autour d'un poste de travail" loading="lazy" width="800" height="600">
+        <figcaption>Photo — Pexels, libre de droit. Échange technique autour d'un poste de travail exposé aux risques ergonomiques.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- A PROPOS DU CABINET -->
+  <section class="alt" id="apropos">
+    <div class="wrap about-grid">
+      <div>
+        <span class="kicker">Notre cabinet</span>
+        <h2>Une expertise dédiée à la santé et à la sécurité au travail</h2>
+        <p>FCT Prévention réunit des consultants formés à l'ergonomie de poste, à la réglementation de la santé au travail et au montage de dossiers de financement public. Nous intervenons auprès d'entreprises industrielles, artisanales, logistiques et associatives, quelle que soit leur taille, avec une méthode éprouvée et un interlocuteur unique du premier échange jusqu'au versement de la subvention.</p>
+        <p>Notre équipe suit l'évolution constante de la réglementation FIPU, des barèmes de prise en charge et des accords de branche, afin de sécuriser chaque dossier déposé et d'en maximiser le taux de financement.</p>
+      </div>
+      <figure class="photo-frame">
+        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/8e797e71-3e93-5398-ae86-01f18ef663d3/ff65e6a8-7fa7-5800-a68d-40c87b06ce82.jpg" alt="Trois professionnels en réunion de travail autour d'une table de bureau" loading="lazy" width="800" height="600">
+        <figcaption>Photo — Pexels, libre de droit. Point d'avancement d'un dossier de subvention FIPU.</figcaption>
+      </figure>
+    </div>
+    <div class="wrap" style="margin-top:48px;">
+      <div class="guarantees">
+        <div class="guarantee">
+          <div class="g-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0c2d52" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/></svg></div>
+          <h3>Conformité garantie</h3>
+          <p>Dossiers montés selon les référentiels officiels de la CNAM et des Carsat régionales.</p>
+        </div>
+        <div class="guarantee">
+          <div class="g-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0c2d52" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3-7 8-7s8 3 8 7"/></svg></div>
+          <h3>Interlocuteur unique</h3>
+          <p>Un consultant dédié vous suit du diagnostic jusqu'au versement de la subvention.</p>
+        </div>
+        <div class="guarantee">
+          <div class="g-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0c2d52" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
+          <h3>Zéro avance de frais</h3>
+          <p>Le montage du dossier est structuré pour maximiser le taux de prise en charge dès le départ.</p>
+        </div>
+        <div class="guarantee">
+          <div class="g-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0c2d52" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Confidentialité RGPD</h3>
+          <p>Vos données d'entreprise et de personnel sont traitées conformément au RGPD.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESTATIONS -->
+  <section id="prestations">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Ce que nous finançons</span>
+        <h2>Les 7 prestations éligibles au FIPU</h2>
+        <p>Chaque étape du parcours de prévention peut mobiliser une part du financement FIPU, du diagnostic initial jusqu'à la reconversion professionnelle.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-row">
+          <div class="service-num">1</div>
+          <div>
+            <h3>Le diagnostic ergonomique des postes de travail</h3>
+            <p>Point d'entrée quasi systématique du parcours de financement. Le diagnostic identifie précisément les situations de travail exposant les salariés aux postures pénibles, aux manutentions ou aux vibrations, et débouche sur un plan d'actions structuré et priorisé.</p>
+            <ul><li>Analyse des postes exposés (observation, mesures, entretiens)</li><li>Cartographie des facteurs de risques par poste ou atelier</li><li>Recommandations chiffrées, mobilisables pour la demande de subvention</li></ul>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">2</div>
+          <div>
+            <h3>Les formations en prévention des risques ergonomiques</h3>
+            <p>Toute formation dispensée par un organisme habilité (référencé INRS ou équivalent) visant à réduire l'exposition aux facteurs de risques ergonomiques est éligible.</p>
+            <ul><li>Formations PRAP (Prévention des Risques liés à l'Activité Physique)</li><li>Formations « gestes et postures » adaptées au métier</li><li>Formation de référents ou préventeurs internes</li></ul>
+            <p style="margin-top:8px; font-size:.85rem;"><em>À noter : les formations dédiées aux membres du CSE et de la CSSCT ne sont pas couvertes par le FIPU.</em></p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">3</div>
+          <div>
+            <h3>Les actions de sensibilisation</h3>
+            <p>Actions ponctuelles ou récurrentes visant à informer et mobiliser les salariés et l'encadrement sur les facteurs de risques ergonomiques : ateliers, campagnes internes, supports pédagogiques, interventions courtes en entreprise.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">4</div>
+          <div>
+            <h3>Les équipements de prévention ergonomique</h3>
+            <p>Achat de matériel réduisant concrètement l'exposition aux risques identifiés lors du diagnostic.</p>
+            <ul><li>Aides mécaniques à la manutention (chariots, palans, exosquelettes, tables élévatrices)</li><li>Équipements réduisant les vibrations mécaniques</li><li>Mobilier et outillage ergonomique</li></ul>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">5</div>
+          <div>
+            <h3>Les aménagements de poste de travail</h3>
+            <p>Dans une logique de prévention de la désinsertion professionnelle, le FIPU finance les travaux et adaptations de poste permettant à un salarié exposé de rester en activité dans de meilleures conditions.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">6</div>
+          <div>
+            <h3>La prise en charge de frais de personnel dédiés</h3>
+            <p>Le fonds peut couvrir une partie du salaire d'un préventeur ou référent interne chargé de déployer les actions financées, dans la limite de 10 000 € sous accord de branche.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">7</div>
+          <div>
+            <h3>Le projet de transition professionnelle (PTP)</h3>
+            <p>Volet individuel du dispositif : un salarié exposé aux facteurs ergonomiques peut bénéficier d'un accès prioritaire à une reconversion financée, l'employeur ne cofinançant que 5 % des coûts pédagogiques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MONTANTS -->
+  <section class="alt" id="montants">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Financement</span>
+        <h2>Montants et plafonds de subvention</h2>
+        <p>Le taux de prise en charge et les plafonds varient selon l'existence d'un accord de branche applicable à votre secteur.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Élément</th><th scope="col">Sans accord de branche</th><th scope="col">Avec accord de branche</th></tr></thead>
+          <tbody>
+            <tr><td>Taux de prise en charge</td><td>70 %</td><td>85 %</td></tr>
+            <tr><td>Plafond par type de prestation</td><td>25 000 €</td><td>50 000 €</td></tr>
+            <tr><td>Plafond cumulé (tous usages)</td><td>75 000 €</td><td>125 000 €</td></tr>
+            <tr><td>Montant minimum de subvention</td><td>500 €</td><td>500 €</td></tr>
+            <tr><td>Plafond frais de personnel dédié</td><td>8 235 €</td><td>10 000 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:20px; max-width:720px;">70 % du budget global du FIPU est réservé en priorité aux entreprises de moins de 50 salariés, ce qui en fait un dispositif particulièrement accessible et avantageux pour les TPE et PME françaises.</p>
+    </div>
+  </section>
+
+  <!-- QUI PEUT DEMANDER -->
+  <section id="eligibilite">
+    <div class="wrap about-grid">
+      <div>
+        <span class="kicker">Éligibilité</span>
+        <h2>Qui peut demander une subvention FIPU ?</h2>
+        <p>Le dispositif s'adresse à un large périmètre d'employeurs, sous réserve de remplir certaines conditions administratives simples à vérifier lors de notre premier échange.</p>
+        <ul class="credentials">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Entreprises relevant du régime général de la sécurité sociale</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Travailleurs indépendants cotisant à l'assurance volontaire AT-MP</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Associations employeuses</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Entreprises à jour de leurs cotisations, avec DUERP actualisé et adhésion à un service de prévention et de santé au travail</li>
+        </ul>
+      </div>
+      <figure class="photo-frame">
+        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/f77a5ff1-7092-527b-a91c-738eee65115c/ff65e6a8-7fa7-5800-a68d-40c87b06ce82.jpg" alt="Signature d'un document de demande de subvention par un dirigeant d'entreprise" loading="lazy" width="800" height="600">
+        <figcaption>Photo — Pexels, libre de droit. Signature du dossier de demande de subvention.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ACCOMPAGNEMENT -->
+  <section class="alt" id="accompagnement">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Notre méthode</span>
+        <h2>Notre accompagnement, étape par étape</h2>
+        <p>Un parcours structuré et transparent, du premier audit jusqu'au versement effectif de la subvention par la CNAM.</p>
+      </div>
+      <div class="timeline-v">
+        <div class="t-item"><h3>1. Audit d'éligibilité</h3><p>Vérification rapide et gratuite de votre situation : DUERP, cotisations, exposition réelle des postes de travail.</p></div>
+        <div class="t-item"><h3>2. Diagnostic ergonomique</h3><p>Visite sur site, identification et priorisation des postes concernés par postures pénibles, manutentions ou vibrations.</p></div>
+        <div class="t-item"><h3>3. Plan d'actions chiffré</h3><p>Proposition combinée de formations, équipements et aménagements, structurée pour maximiser les plafonds cumulables.</p></div>
+        <div class="t-item"><h3>4. Montage du dossier</h3><p>Constitution complète du dossier de subvention et dépôt via votre compte AT-MP sur net-entreprises.fr.</p></div>
+        <div class="t-item"><h3>5. Suivi et justification</h3><p>Accompagnement jusqu'au versement, sur présentation des factures acquittées, avec point d'étape régulier.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMOIGNAGES -->
+  <section id="temoignages">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Ils nous font confiance</span>
+        <h2>Ce que nos clients en disent</h2>
+        <p>Des dirigeants de TPE et PME qui ont mené leur projet de prévention à terme avec notre accompagnement.</p>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="quote-mark">"</div>
+          <p class="quote">Le diagnostic a mis en évidence des risques que nous n'avions pas identifiés seuls. Le dossier a été accepté avec une prise en charge à 85 %.</p>
+          <div class="author"><div class="avatar">SL</div><div><div class="name">S. Lefebvre</div><div class="role">Dirigeante, PME logistique</div></div></div>
+        </div>
+        <div class="testimonial">
+          <div class="quote-mark">"</div>
+          <p class="quote">Un accompagnement clair à chaque étape, sans jargon administratif. Nous avons pu équiper l'atelier sans avancer les frais.</p>
+          <div class="author"><div class="avatar">JM</div><div><div class="name">J. Moreau</div><div class="role">Responsable HSE, industrie</div></div></div>
+        </div>
+        <div class="testimonial">
+          <div class="quote-mark">"</div>
+          <p class="quote">Le suivi jusqu'au versement a fait toute la différence : nous n'avons eu qu'à valider les décisions, le reste a été pris en charge.</p>
+          <div class="author"><div class="avatar">RP</div><div><div class="name">R. Petit</div><div class="role">Gérant, artisanat</div></div></div>
+        </div>
+      </div>
+      <p style="margin-top:16px; font-size:.78rem;"><em>Témoignages illustratifs à remplacer par de vrais retours de vos clients avant mise en ligne.</em></p>
+    </div>
+  </section>
+
+  <!-- LOGOS / REFERENCES -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:24px;">
+        <span class="kicker">Références et cadre institutionnel</span>
+        <h2>Un dispositif adossé aux organismes officiels</h2>
+      </div>
+      <div class="logos-strip">
+        <div class="logo-chip">CNAM</div>
+        <div class="logo-chip">Assurance Maladie — Risques professionnels</div>
+        <div class="logo-chip">Carsat</div>
+        <div class="logo-chip">INRS</div>
+        <div class="logo-chip">net-entreprises.fr</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNIERE URGENCE -->
+  <section>
+    <div class="wrap">
+      <div class="banner">
+        <div>
+          <h3>Pourquoi engager votre démarche dès maintenant</h3>
+          <p>Les dossiers FIPU sont traités par ordre d'arrivée et attribués selon les budgets régionaux disponibles. Anticiper votre diagnostic et votre plan d'actions permet de sécuriser le financement avant l'épuisement de l'enveloppe annuelle.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">Réserver un échange gratuit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="alt" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Questions fréquentes</span>
+        <h2>Tout savoir sur le FIPU</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary>Qu'est-ce que le FIPU ?</summary>
+        <p class="faq-answer">Le FIPU (Fonds d'Investissement dans la Prévention de l'Usure professionnelle) est un dispositif national de l'Assurance Maladie créé en 2023, doté d'environ un milliard d'euros sur cinq ans, qui subventionne les actions de prévention contre les postures pénibles, les manutentions manuelles et les vibrations mécaniques.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quel est le taux de prise en charge du FIPU ?</summary>
+        <p class="faq-answer">Le taux de prise en charge est de 70 % sans accord de branche et de 85 % avec accord de branche, avec un plafond cumulé de subvention allant jusqu'à 75 000 € ou 125 000 € par entreprise selon le cas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quelles entreprises sont éligibles au FIPU ?</summary>
+        <p class="faq-answer">Sont éligibles les entreprises du régime général, les travailleurs indépendants cotisant à l'assurance volontaire AT-MP et les associations employeuses, à condition d'être à jour de leurs cotisations, d'avoir un DUERP actualisé et d'adhérer à un service de prévention et de santé au travail.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quelles prestations sont finançables par le FIPU ?</summary>
+        <p class="faq-answer">Le FIPU finance le diagnostic ergonomique, les formations en prévention, les actions de sensibilisation, les équipements ergonomiques, les aménagements de poste, une partie des frais de personnel dédié et le projet de transition professionnelle.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment demander une subvention FIPU ?</summary>
+        <p class="faq-answer">La demande passe par un audit d'éligibilité, un diagnostic ergonomique, un plan d'actions chiffré, puis le dépôt du dossier via le compte AT-MP de l'entreprise sur net-entreprises.fr, avant justification des dépenses sur factures acquittées.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quel est le plafond de subvention FIPU par entreprise ?</summary>
+        <p class="faq-answer">Le plafond cumulé, toutes prestations confondues, est de 75 000 € sans accord de branche et de 125 000 € avec accord de branche.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contact">
+    <div class="wrap">
+      <h2>Réservez votre premier échange gratuit</h2>
+      <p>Évaluez en 15 minutes votre éligibilité au FIPU et estimez le montant de subvention mobilisable pour votre entreprise, sans engagement.</p>
+      <a href="mailto:direction@fct-ingenierie.fr" class="btn btn-primary">Demander un diagnostic gratuit</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h4>FCT Prévention</h4>
+      <p style="max-width:280px;">Cabinet de conseil spécialisé dans le financement FIPU et la prévention des risques professionnels pour les TPE, PME et associations.</p>
+    </div>
+    <div><h4>Le dispositif</h4><ul><li><a href="#fipu">Qu'est-ce que le FIPU</a></li><li><a href="#montants">Montants et plafonds</a></li><li><a href="#eligibilite">Éligibilité</a></li></ul></div>
+    <div><h4>Le cabinet</h4><ul><li><a href="#apropos">Notre expertise</a></li><li><a href="#accompagnement">Notre méthode</a></li><li><a href="#temoignages">Témoignages</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="mailto:direction@fct-ingenierie.fr">direction@fct-ingenierie.fr</a></li><li><a href="tel:+33183644893">01 83 64 48 93</a></li><li><a href="#faq">Questions fréquentes</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 FCT Prévention — Tous droits réservés</span>
+    <span><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité (RGPD)</a></span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Organization","name":"FCT Prévention","url":"https://www.fct-prevention.fr/","description":"Cabinet de conseil accompagnant les TPE/PME dans le financement FIPU de leurs actions de prévention de l'usure professionnelle.","areaServed":"FR"},
+    {"@type":"WebSite","url":"https://www.fct-prevention.fr/","name":"FCT Prévention","inLanguage":"fr-FR"},
+    {"@type":"Service","serviceType":"Accompagnement au financement FIPU","provider":{"@type":"Organization","name":"FCT Prévention"},"areaServed":"FR","description":"Diagnostic ergonomique, montage de dossier et suivi jusqu'au versement de la subvention FIPU, jusqu'à 125 000 € par entreprise."},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Qu'est-ce que le FIPU ?","acceptedAnswer":{"@type":"Answer","text":"Le FIPU est un dispositif national de l'Assurance Maladie créé en 2023, doté d'environ un milliard d'euros sur cinq ans, qui subventionne la prévention des postures pénibles, manutentions manuelles et vibrations mécaniques."}},
+      {"@type":"Question","name":"Quel est le taux de prise en charge du FIPU ?","acceptedAnswer":{"@type":"Answer","text":"70% sans accord de branche et 85% avec accord de branche, plafond cumulé de 75 000 € à 125 000 € par entreprise."}},
+      {"@type":"Question","name":"Quelles entreprises sont éligibles au FIPU ?","acceptedAnswer":{"@type":"Answer","text":"Entreprises du régime général, indépendants cotisant à l'assurance volontaire AT-MP et associations employeuses, à jour de cotisations, avec DUERP et adhésion à un service de santé au travail."}},
+      {"@type":"Question","name":"Quelles prestations sont finançables par le FIPU ?","acceptedAnswer":{"@type":"Answer","text":"Diagnostic ergonomique, formations, sensibilisation, équipements, aménagements de poste, frais de personnel dédié et projet de transition professionnelle."}},
+      {"@type":"Question","name":"Comment demander une subvention FIPU ?","acceptedAnswer":{"@type":"Answer","text":"Audit d'éligibilité, diagnostic ergonomique, plan d'actions chiffré, puis dépôt du dossier via le compte AT-MP sur net-entreprises.fr."}},
+      {"@type":"Question","name":"Quel est le plafond de subvention FIPU par entreprise ?","acceptedAnswer":{"@type":"Answer","text":"75 000 € sans accord de branche et 125 000 € avec accord de branche."}}
+    ]}
+  ]
+}
+</script>
+
+</body>
+</html>
